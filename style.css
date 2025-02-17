@@ -4,132 +4,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-section {
-    position: 
+html{
+    font-size: 62.5%;
+}
+
+body {
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: url(pets.png)no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #c7d7f1;
+    color: white;
 }
 
 header {
-    position: 
+    margin-top: 20px;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
-header .purrfecthearts {
-    position: relative;
-    color: #ab133c; 
-    font-size: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
+.logo{
+    font-size: 3rem;
+    color: #638AC9;
     font-weight: 800;
-    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s ease;
 }
 
-header .navigation a {
-    color:#000;
-    background: #f0a9ba;
-    text-decoration: none;
+.logo:hover{
+    color: #f1f1f1;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
     font-weight: 500;
-    letter-spacing: 1px;
-    padding: 2px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: background;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
-header .navigation a:not(:last-child){
-    margin-right: 30px;
+nav a:hover, nav a.active{
+    color: #638AC9;
+    border-bottom: 3px solid #638AC9;
 }
 
-header .navigation a:hover{
-    background: #fff;
+@media(max-wdith:995px){
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #638AC9;
+        border-bottom: 3px solid #638AC9;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #4266A0;
+        border-top: 0.1rem solid #638AC9;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5 solid #638AC9;
+    }
 }
 
-.content{
-    max-width: 650px;
-    margin: 60px 100px;
-}
-
-.content .info h2{
-    color: #d5436a;
-    font-size: 55px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    line-height: 60px;
-    margin-bottom: 30px;
-}
-
-.content .info h2 span{
-    color: #fffcfc;
-    font-size: 50px;
-    font-weight: 600;
-}
-
-.content .info p{
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 40px;
-}
-
-.content .info-btn{
-    color: #fff;
-    background: #d5436a;
-    text-decoration: none;
-    text-transform: uppercase
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-    transition-property: background;
-}
-
-.content .info .btn:hover{
-    background: #ab133c;
-}
-
-.media-icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-.media-icons a{
-    position: 
-    color: #fff;
-    font-size: 25px;
-    transition: 0.3s;
-    transition-property: transform;
-}
-
-.media-icons a:not(:last-child){
-    margin-right: 60px;
-}
-
-.media-icons a:hover{
-    transform: scale(1.5);
-}
-
-label{
-    display: none;
-}
-
-#check{
-    z-index: 3;
-}
