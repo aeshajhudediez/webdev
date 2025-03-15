@@ -28,7 +28,7 @@ function calculateResult() {
             display.innerText = "Error";
         } else {
             let result = eval(expression);
-            expression = Number.isInteger(result) ? result.toString() : parseFloat(result.toFixed(4)).toString(); // Remove unnecessary decimals
+            expression = Number.isInteger(result) ? result.toString() : parseFloat(result.toFixed(4)).toString(); 
             updateDisplay();
         }
     } catch (error) {
